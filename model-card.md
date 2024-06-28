@@ -32,6 +32,7 @@ config_path = hf_hub_download(repo_id="ibm-granite/granite-geospatial-biomass", 
 model = LightningInferenceModel.from_config(config_path, ckpt_path)
 
 inference_results, input_file_names = model.inference_on_dir(<input_directory>)
+```
 
 For more details, check out the [Getting Started Notebook](https://github.com/ibm-granite/granite-geospatial-biomass/blob/main/notebooks/agb_getting_started.ipynb) which guides the user through three experiments:
 
@@ -79,9 +80,9 @@ The model was trained on a collection of datasets provided by NASA:
 
 For training and testing, the model requires a cloud-free snapshot of an area where all pixels are representative of the spectral bands for that location. The approach we used to create the cloud free images was to acquire HLS data during the leaf-on season for each hemisphere, analyze the timeseries, and select pixels that are not contaminated with clouds. We compute the mean value of each cloud-free pixel during the leaf-on season for each spectral band which is then assembled into a composite image representative for that area. The corresponding GEDI L4A biomass data obtained made during the same leaf-on season are interpolated to the HLS grid (CRS:4326) such that the measured biomass points are aligned with HLS data. GEDI data is spatially and temporaly sparse so pixels with no corresponding GEDI measurement are filled with a no data value.
 
-<!-- 
-TODO: add citation
-## Citation [optional]
+
+<!-- TODO: add citation -->
+<!-- ## Citation [optional]
 Kindly cite the following paper, if you intend to use our model or its associated architectures/approaches in your 
 work
 
@@ -93,9 +94,9 @@ TBD
 }
 ```
 
-**APA:** -->
+**APA:** 
 
-TBD
+TBD -->
 
 ## Model Card Authors
 
