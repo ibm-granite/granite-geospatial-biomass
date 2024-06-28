@@ -7,7 +7,7 @@ Public notebooks and utilities for working with the fine-tuned granite.geospatia
 First clone the repository:
 
 ```sh
-git clone git@github.com:ibm-granite/granite-geospatial-biomass.git
+git clone https://github.com/ibm-granite/granite-geospatial-biomass.git
 ```
 
 Then run `pip install -e .` to install all necessary dependencies to run the notebook
