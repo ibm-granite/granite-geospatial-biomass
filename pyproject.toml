@@ -1,0 +1,62 @@
+[build-system]
+requires = [ "setuptools" ]
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = "granite-biomass"
+version = "0.99.0"
+description = "Granite Above Ground Biomass Models"
+license = { "text" = "Apache License, Version 2.0" }
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["fine-tuning", "geospatial foundation models", "above ground biomass"]
+authors = [
+  { name = "Julian Kuehnert", email = "julian.kuehnert@ibm.com"},
+  { name = "Carlos Gomes", email = "carlos.gomes@ibm.com" },
+]
+
+dependencies = [
+  "terratorch==0.99.1",
+  "torch>=2.1.0",
+  "torchvision>=0.16.0",
+  "terratorch",
+  "huggingface_hub",
+  "jupyter",
+  "matplotlib"
+]
+
+[tool.setuptools]
+packages = ["utils"]
+
+[project.urls]
+Documentation = "https://github.com/ibm-granite/granite-geospatial-biomass#readme"
+Issues = "https://github.com/ibm-granite/granite-geospatial-biomass/issues"
+Source = "https://github.com/ibm-granite/granite-geospatial-biomass"
+# Huggingface Hub = ""
+
+[tool.ruff]
+# Never enforce `E501` (line length violations).
+ignore = ["C901", "E501", "E741", "F402", "F823" ]
+select = ["C", "E", "F", "I", "W"]
+line-length = 119
+
+# Ignore import violations in all `__init__.py` files.
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["E402", "F401", "F403", "F811"]
+
+[tool.ruff.isort]
+lines-after-imports = 2
+known-first-party = ["tsfm_public"]
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
