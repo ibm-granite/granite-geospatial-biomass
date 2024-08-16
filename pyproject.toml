@@ -16,7 +16,9 @@ authors = [
 ]
 
 dependencies = [
+  "lightning-utilities==0.11.3.post",
   "terratorch==0.99.1",
+  "albumentations==1.4.3",
   "torch>=2.1.0",
   "torchvision>=0.16.0",
   "terratorch",
